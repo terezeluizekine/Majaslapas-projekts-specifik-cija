@@ -19,7 +19,7 @@ Atverot mājaslapu, lietotājs nonāk galvenajā panelī, kur vienuviet redz:
 - **Taimeri un hronometru:** koncentrēšanās sesijas ar pomodoro atbalstu un progresa vizualizāciju
 - **Statistiku:** nedēļas/mēneša pārskats (kopējais fokusēšanās laiks, ieradumu izpildes % u.c.)
 
-**Lietotāji:** skolēni, studenti un ikviens, kuriem ir daudz uzdevumu un mācību mērķu.
+**Lietotāji:** skolēni, studenti un ikviens, kam ir daudz uzdevumu un mācību mērķu.
 
 **Tehnoloģijas:** HTML, CSS, JavaScript; datu glabāšanai tiks izmantots `localStorage`.
 
