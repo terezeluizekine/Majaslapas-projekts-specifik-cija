@@ -147,6 +147,10 @@ Sistēma sastāv no trim galvenajiem slāņiem:
 
 ---
 
+![Projekta izstrādes Gantt diagramma](Documents/blokshema.png)
+
+---
+
 ## Izstrādes plāns (10 nedēļas)
 
 Projekta izstrāde ir plānota 10 nedēļu laikā, pieņemot, ka pamatprasības un funkciju saraksts jau ir definēts. Darbs tiek sadalīts starp abām autorēm, lai varētu strādāt paralēli: **Kitija** primāri atbild par loģiku, datu struktūrām, arhitektūru un integrāciju (projekta “back-end” daļu pārlūkā), savukārt **Terēze** primāri atbild par lietotāja saskarni, dizainu un front-end funkcionalitātes ieviešanu.
@@ -310,3 +314,4 @@ Lietotne ir vienota, stabila, ērta un bez kritiskām kļūdām.
 Gatavs projekts demonstrācijai: stabila versija + saprotama dokumentācija.
 
 ---
+![Projekta izstrādes Gantt diagramma](Documents/gantt_diagramma.png)
