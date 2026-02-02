@@ -1,4 +1,4 @@
-# Majaslapas-projekts-specifik-cija
+# Majaslapas-projekts-specifikacija
 
 ## Autori
 Terēze Luīze Kīne un Kitija Kampiņa
