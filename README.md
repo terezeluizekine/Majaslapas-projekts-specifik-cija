@@ -1,0 +1,1 @@
+# Majaslapas-projekts-specifik-cija
