@@ -4,7 +4,7 @@
 Terēze Luīze Kīne un Kitija Kampiņa
 
 ## Projekta ideja
-Mēs izstrādājam mācību plānotāju — tīmekļa lietotni, kas kalpo kā vienots ikdienas mācību un pienākumu pārvaldības rīks. Mēs to vēlamies izstrādāt, tāpēc, jo ikdiena ir ļoti intensīva: mājasdarbi, kontroldarbi, gatavošanās olimpiādēm un darbs pie personīgajiem projektiem prasa labu laika plānošanu un disciplīnu. Bez strukturēta rīka ir viegli aizmirst svarīgus termiņus vai nepaspēt visu izdarīt kvalitatīvi.
+Mēs izstrādājam mācību plānotāju — tīmekļa lietotni, kas kalpo kā vienots ikdienas mācību un pienākumu pārvaldības rīks. Mēs to vēlamies izstrādāt, tāpēc, ka ikdiena ir ļoti intensīva: mājasdarbi, kontroldarbi, gatavošanās olimpiādēm un darbs pie personīgajiem projektiem prasa labu laika plānošanu un disciplīnu. Bez strukturēta rīka ir viegli aizmirst svarīgus termiņus vai nepaspēt visu izdarīt kvalitatīvi.
 
 Mācību plānotājs paredzēts kā ikdienas “vadības centrs”, kas palīdz lietotājam:
 - strukturēt darāmos uzdevumus
