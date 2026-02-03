@@ -163,7 +163,7 @@ Projekta izstrāde ir plānota 10 nedēļu laikā, pieņemot, ka pamatprasības 
 
 ### 1. nedēļa – Projekta pamati un kopējā struktūra
 **Kitija:**
-- Definē datu modeļus (Task, Habit, Event, FocusSession)
+- Definē datu moduļus (Task, Habit, Event, FocusSession)
 - Izveido `storage.js` (save/load helpers, atslēgu shēma, JSON serializācija)
 
 **Terēze:**
@@ -172,7 +172,7 @@ Projekta izstrāde ir plānota 10 nedēļu laikā, pieņemot, ka pamatprasības 
 - Sagatavo CSS bāzes stilu (krāsas, fonti, pogas, kartītes)
 
 **Rezultāts:**  
-Definēti datu modeļi un UI prototips.
+Definēti datu moduļi un UI prototips.
 
 ---
 
