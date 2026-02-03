@@ -121,12 +121,12 @@ Pirmajā versijā nav nepieciešama instalācija vai lietotāja konts.
 Sistēma sastāv no trim galvenajiem slāņiem:
 
 1. **UI slānis** (lietotāja saskarne)
-   - Dashboard
-   - To-do
-   - Habits
-   - Calendar
-   - Timer/Stopwatch
-   - Stats
+   - Galvenais panelis
+   - Darāmo darbu saraksts
+   - Ieradamu sekotājs
+   - Kalendārs
+   - Taimeris/hronometrs
+   - Statistika
 
 2. **Loģikas slānis** (JavaScript moduļi)
    - uzdevumu kārtošana un filtrēšana
