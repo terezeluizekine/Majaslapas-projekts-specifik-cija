@@ -141,3 +141,8 @@ button.ghost {
   text-decoration: line-through;
   color: var(--muted);
 }
+
+.task-content {
+  display: grid;
+  gap: 0.2rem;
+}
