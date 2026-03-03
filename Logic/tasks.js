@@ -20,6 +20,35 @@
       return date.toLocaleDateString('lv-LV');
     }
 
+    function getDeadlineValue(value) {
+      if (!value) return Number.POSITIVE_INFINITY;
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return Number.POSITIVE_INFINITY;
+      return date.getTime();
+    }
+
+    function getPriorityValue(priority) {
+      const priorityMap = {
+        Augsta: 0,
+        Vidēja: 1,
+        Zema: 2,
+      };
+
+      return priorityMap[priority] ?? Number.POSITIVE_INFINITY;
+    }
+
+    function sortTasks(items) {
+      return [...items].sort((left, right) => {
+        const deadlineDiff = getDeadlineValue(left.deadline) - getDeadlineValue(right.deadline);
+        if (deadlineDiff !== 0) return deadlineDiff;
+
+        const priorityDiff = getPriorityValue(left.priority) - getPriorityValue(right.priority);
+        if (priorityDiff !== 0) return priorityDiff;
+
+        return left.text.localeCompare(right.text, 'lv-LV', { sensitivity: 'base' });
+      });
+    }
+
     function updateCounter() {
       taskCount.textContent = taskList.children.length;
     }
@@ -36,7 +65,7 @@
     function renderTasks() {
       taskList.innerHTML = '';
 
-      tasks.forEach((task) => {
+      sortTasks(tasks).forEach((task) => {
         const li = document.createElement('li');
         li.className = 'item';
 
