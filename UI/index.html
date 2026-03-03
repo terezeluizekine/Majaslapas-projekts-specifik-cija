@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mācību plānotājs</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Mācību plānotājs</h1>
+    <p class="subtitle">Sāc plānot savu laiku!</p>
+  </header>
+
+  <main class="layout">
+    <section class="card" id="tasks-module" aria-labelledby="tasks-title">
+      <div class="card-header">
+        <h2 id="tasks-title">Uzdevumi</h2>
+        <span class="badge" id="task-count">0</span>
+      </div>
+
+      <form id="task-form" class="form-grid">
+        <label>
+          Uzdevums
+          <input type="text" id="task-input" placeholder="Piemēram, matemātikas mājasdarbs" required />
+        </label>
+
+        <label>
+          Prioritāte
+          <select id="task-priority">
+            <option value="Augsta">Augsta</option>
+            <option value="Vidēja" selected>Vidēja</option>
+            <option value="Zema">Zema</option>
+          </select>
+        </label>
+
+        <button type="submit">Pievienot uzdevumu</button>
+      </form>
+
+      <ul id="task-list" class="item-list" aria-live="polite"></ul>
+    </section>
+
+    <section class="card" id="habits-module" aria-labelledby="habits-title">
+      <div class="card-header">
+        <h2 id="habits-title">Ieradumi</h2>
+        <span class="badge" id="habit-count">0</span>
+      </div>
+
+      <form id="habit-form" class="form-grid">
+        <label>
+          Ieradums
+          <input type="text" id="habit-input" placeholder="Piemēram, 30 min mācības" required />
+        </label>
+
+        <button type="submit">Pievienot ieradumu</button>
+      </form>
+
+      <ul id="habit-list" class="item-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <script src="../Logic/storage.js"></script>
+  <script src="../Logic/app.js"></script>
+</body>
+</html>
