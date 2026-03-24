@@ -4,9 +4,9 @@
 Projektā ir izveidota vienkārša testēšanas vide, kas ļauj ātri pārbaudīt galveno funkcionalitāti bez manuālas datu ievades.
 
 Testēšana notiek tieši pārlūkā (client-side), izmantojot:
--JavaScript loģiku,
--localStorage datu saglabāšanai,
--lietotāja interfeisa (UI) darbības.
+- JavaScript loģiku,
+- localStorage datu saglabāšanai,
+- lietotāja interfeisa (UI) darbības.
 
 ---
 
