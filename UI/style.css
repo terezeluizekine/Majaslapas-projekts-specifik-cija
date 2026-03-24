@@ -108,6 +108,11 @@ button.ghost {
   padding: 0.35rem 0.6rem;
 }
 
+button.danger {
+  background: #d93a57;
+  color: #fff;
+}
+
 .item-list {
   margin: 0;
   padding: 0;
@@ -145,4 +150,38 @@ button.ghost {
 .task-content {
   display: grid;
   gap: 0.2rem;
+}
+
+/* Jaunās sadaļas, bet vecajā stilā */
+
+.testing-card {
+  grid-column: 1 / -1;
+}
+
+.testing-buttons,
+.timer-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.helper-text {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.timer-box {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: #fff;
+}
+
+.timer-display {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
 }

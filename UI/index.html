@@ -13,6 +13,22 @@
   </header>
 
   <main class="layout">
+    <section class="card testing-card" aria-labelledby="testing-title">
+      <div class="card-header">
+        <h2 id="testing-title">Testēšanas vide</h2>
+      </div>
+      <div class="testing-buttons">
+        <button type="button" id="fill-demo-data">Ievietot gatavus datus</button>
+        <button type="button" id="clear-all-data" class="danger">Dzēst visu</button>
+        <button type="button" onclick="Tests.runAllTests()">
+  Palaist testus
+</button>
+      </div>
+      <p class="helper-text">
+        Šī sadaļa paredzēta ātrai funkcionalitātes pārbaudei.
+      </p>
+    </section>
+
     <section class="card" id="tasks-module" aria-labelledby="tasks-title">
       <div class="card-header">
         <h2 id="tasks-title">Uzdevumi</h2>
@@ -62,11 +78,53 @@
 
       <ul id="habit-list" class="item-list" aria-live="polite"></ul>
     </section>
+
+    <section class="card" id="timer-module" aria-labelledby="timer-title">
+      <div class="card-header">
+        <h2 id="timer-title">Taimeris / Pomodoro</h2>
+        <span class="badge">Sesijas: <span id="pomodoro-session-count">0</span></span>
+      </div>
+
+      <div class="form-grid">
+        <label>
+          Režīms
+          <select id="timer-mode">
+            <option value="timer">Parastais taimeris</option>
+            <option value="pomodoro">Pomodoro</option>
+          </select>
+        </label>
+
+        <label>
+          Minūtes
+          <input type="number" id="timer-minutes" min="0" value="25" />
+        </label>
+
+        <label>
+          Sekundes
+          <input type="number" id="timer-seconds" min="0" max="59" value="0" />
+        </label>
+      </div>
+
+      <div class="timer-box">
+        <div id="timer-display" class="timer-display">25:00</div>
+        <p id="timer-status" class="helper-text">Parastais taimeris</p>
+      </div>
+
+      <div class="timer-buttons">
+        <button type="button" id="timer-start">Starts</button>
+        <button type="button" id="timer-pause" class="ghost">Pauze</button>
+        <button type="button" id="timer-reset" class="ghost">Atiestatīt</button>
+        <button type="button" id="timer-skip" class="ghost">Pārslēgt fāzi</button>
+      </div>
+    </section>
   </main>
 
   <script src="../Logic/storage.js"></script>
+  <script src="../Logic/utils.js"></script>
   <script src="../Logic/tasks.js"></script>
   <script src="../Logic/habits.js"></script>
+  <script src="../Logic/timer.js"></script>
   <script src="../Logic/app.js"></script>
+  <script src="../Logic/tests.js"></script>
 </body>
 </html>
