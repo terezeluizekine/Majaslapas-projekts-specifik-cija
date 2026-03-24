@@ -53,7 +53,7 @@ Atrašanās vieta: fails "tests.js"
 - datu struktūru korektumu.
 - Akcepttesti (Acceptance tests)
 
-## Ar izveidoto akcepttestu struktūru ir iespējams pārbaudīt lietotāja darbību scenārijus:
+### Ar izveidoto akcepttestu struktūru ir iespējams pārbaudīt lietotāja darbību scenārijus:
 - uzdevuma pievienošanu,
 - uzdevuma dzēšanu,
 - ieraduma atzīmēšanu,
