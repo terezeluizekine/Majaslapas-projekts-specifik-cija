@@ -9,6 +9,47 @@
     }
   }
 
+  // Veicam renderēšanas pārbaudi, kur tiek izveidots liels daudzums ar mākslīgiem botiem.
+  function runPerformanceTest() {
+    console.group('VEIKTSPĒJAS TESTI: Lielu ieradumu renderēšana');
+
+    // Masīva izveide, kur ir 500 botu
+    const hugeHabits = [];
+    for (let i = 0; i < 5000; i++) {
+      hugeHabits.push({
+        id: StorageService.createId(),
+        text: 'Ieradums ' + i,
+        done: false
+      });
+    }
+
+
+    const originalLoad = StorageService.loadItems;
+    StorageService.loadItems = (key) => key === StorageService.STORAGE_KEYS.habits ? hugeHabits : originalLoad(key);
+
+    // Iniciācija
+    const startTime = performance.now();
+    HabitsModule.initializeHabitsModule();
+    const endTime = performance.now();
+
+    console.log(`Renderēti ${hugeHabits.length} ieradumi.`);
+    console.log(`Renderēšanas laiks: ${(endTime - startTime).toFixed(2)} ms`);
+
+    // Pārbaude
+    const habitList = document.querySelector('#habit-list');
+    if (habitList) {
+      const listLength = habitList.children.length;
+      console.assert(listLength === hugeHabits.length, `DOM satur ${listLength} ieradumus (paredzēti ${hugeHabits.length})`);
+    } else {
+      console.error('❌ #habit-list nav atrasts DOM');
+    }
+
+    // Atjaunojam loadItems funkciju
+    StorageService.loadItems = originalLoad;
+
+    console.groupEnd();
+  }
+
   function runUnitTests() {
     console.group('UNIT TESTI');
 
@@ -63,6 +104,22 @@
 
     assert(habits[0].done === true, 'Ieradums atzīmēts kā izpildīts');
 
+    // JAUNS SCENĀRIJS: pievienot ieradumu
+    let habitsList = [];
+    const newHabitText = 'Jauns ieradums';
+
+    const newHabit = {
+      id: createId(),
+      text: newHabitText,
+      done: false
+    };
+
+    habitsList.push(newHabit);
+
+    assert(habitsList.length === 1, 'Ieradums pievienots');
+    assert(habitsList[0].text === newHabitText, 'Ieraduma teksts pareizs');
+    assert(habitsList[0].done === false, 'Ieradums sākumā nav izpildīts');
+
     console.groupEnd();
   }
 
@@ -71,6 +128,7 @@
     console.log('--- TESTĒŠANA ---');
     runUnitTests();
     runAcceptanceTests();
+    runPerformanceTest();
   }
 
   globalScope.Tests = {
