@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="69147a72-1ff9-4920-9a89-cc3a05452a94" name="Changes" comment="Pievienoju akcepttestu, kur pārbaudīju iespēju izmantot &quot;Pievenot ieradumus&quot;:&#10;*Vai ieradums tiek pareizi ievadīts.&#10;*Vai tiek saglabāts masīvā.&#10;*Vai ieradums jau automātiski netiek &quot;atķeksēts&quot;, kad viņu tikai pievienoja.&#10;Pievienots renderēšanas tests, kur tiek simulēts liels skaits ar ieradumiem. Pārbauda, vai sp';ej visu attēlot un cik ātri." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;RobertoSmila&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Unreal00000/Majaslapas-projekts-specifik-cija.git&quot;,
+    &quot;accountId&quot;: &quot;f7c9ce1b-b7ed-4e62-88b8-76a041b2781b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3ByiKHpMwO9m8txEjBIiCAfIS2j" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaScript Debug.index.html.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "Roberts",
+    "javascript.preferred.runtime.type.id": "node",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.30387.83" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69147a72-1ff9-4920-9a89-cc3a05452a94" name="Changes" comment="" />
+      <created>1775467644704</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1775467644704</updated>
+      <workItem from="1775467645877" duration="479000" />
+      <workItem from="1775539816694" duration="979000" />
+    </task>
+    <task id="LOCAL-00001" summary="Pievienoju akcepttestu, kur pārbaudīju iespēju izmantot &quot;Pievenot ieradumus&quot;:&#10;*Vai ieradums tiek pareizi ievadīts.&#10;*Vai tiek saglabāts masīvā.&#10;*Vai ieradums jau automātiski netiek &quot;atķeksēts&quot;, kad viņu tikai pievienoja.&#10;Pievienots renderēšanas tests, kur tiek simulēts liels skaits ar ieradumiem. Pārbauda, vai sp';ej visu attēlot un cik ātri.">
+      <option name="closed" value="true" />
+      <created>1775467937832</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1775467937832</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Pievienoju akcepttestu, kur pārbaudīju iespēju izmantot &quot;Pievenot ieradumus&quot;:&#10;*Vai ieradums tiek pareizi ievadīts.&#10;*Vai tiek saglabāts masīvā.&#10;*Vai ieradums jau automātiski netiek &quot;atķeksēts&quot;, kad viņu tikai pievienoja.&#10;Pievienots renderēšanas tests, kur tiek simulēts liels skaits ar ieradumiem. Pārbauda, vai sp';ej visu attēlot un cik ātri." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pievienoju akcepttestu, kur pārbaudīju iespēju izmantot &quot;Pievenot ieradumus&quot;:&#10;*Vai ieradums tiek pareizi ievadīts.&#10;*Vai tiek saglabāts masīvā.&#10;*Vai ieradums jau automātiski netiek &quot;atķeksēts&quot;, kad viņu tikai pievienoja.&#10;Pievienots renderēšanas tests, kur tiek simulēts liels skaits ar ieradumiem. Pārbauda, vai sp';ej visu attēlot un cik ātri." />
+  </component>
+</project>
