@@ -143,12 +143,56 @@
     console.groupEnd();
   }
 
+  function runSecurityTest() {
+    console.group('DROŠĪBAS TESTS: XSS aizsardzība');
+
+    const maliciousInput = '<script>alert("HACK")</script>';
+
+    const habits = [{
+      id: createId(),
+      text: maliciousInput,
+      done: false
+    }];
+
+    StorageService.saveItems(StorageService.STORAGE_KEYS.habits, habits);
+    HabitsModule.initializeHabitsModule();
+
+    const label = document.querySelector('#habit-list span');
+
+    assert(label.textContent === maliciousInput, 'Teksts saglabāts kā plain text (nav izpildīts kā kods)');
+    assert(!label.innerHTML.includes('<script>'), 'Script tags netiek interpretēts HTML');
+
+    console.groupEnd();
+  }
+
+  function runReliabilityTest() {
+    console.group('UZTICAMĪBAS TESTS: bojāti dati');
+
+    // Nepareizu datu (bojātu) ievade vienā masīvā
+    localStorage.setItem(StorageService.STORAGE_KEYS.habits, 'INVALID JSON');
+
+    try {
+      HabitsModule.initializeHabitsModule();
+
+      const habitList = document.querySelector('#habit-list');
+
+      assert(habitList.children.length === 0, 'Bojāti dati neizraisa crash un tiek ignorēti');
+
+    } catch (error) {
+      console.error('❌ Aplikācija uzkārās ar bojātiem datiem', error);
+    }
+
+    console.groupEnd();
+  }
+
   function runAllTests() {
     console.clear();
     console.log('--- TESTĒŠANA ---');
     runUnitTests();
     runAcceptanceTests();
     runPerformanceTest();
+    runSecurityTest();
+    runReliabilityTest();
   }
 
   globalScope.Tests = {
