@@ -71,27 +71,40 @@
     console.groupEnd();
   }
 
-  function runAcceptanceTests() {
-    console.group('AKCEPTTESTI');
 
-    // SCENĀRIJS: pievienot uzdevumu
-    let tasks = [];
+    function runAcceptanceTests() {
+      console.group('AKCEPTTESTI');
 
-    const newTask = {
-      id: createId(),
-      text: 'Testa uzdevums',
-      priority: 'Augsta',
-      deadline: '',
-    };
+      const newTask = {
+        id: createId(),
+        text: 'Testa uzdevums',
+        priority: 'Augsta',
+        deadline: '',
+      };
 
-    tasks.push(newTask);
+      let tasks = StorageService.loadItems(StorageService.STORAGE_KEYS.tasks);
+      let taskLength = tasks.length;
 
-    assert(tasks.length === 1, 'Uzdevums pievienots');
+      tasks.push(newTask);
+      StorageService.saveItems(StorageService.STORAGE_KEYS.tasks, tasks);
 
-    // SCENĀRIJS: dzēst uzdevumu
-    tasks = tasks.filter(t => t.id !== newTask.id);
+      tasks = StorageService.loadItems(StorageService.STORAGE_KEYS.tasks);
 
-    assert(tasks.length === 0, 'Uzdevums dzēsts');
+      assert(tasks.length === taskLength + 1, 'Uzdevums pievienots');
+      assert(tasks[taskLength].text === 'Testa uzdevums', 'Uzdevuma teksts saglabāts');
+      assert(tasks[taskLength].priority === 'Augsta', 'Uzdevuma prioritāte saglabāta');
+
+      window.TasksModule.initializeTasksModule();
+
+      // SCENĀRIJS: dzēst uzdevumu
+      tasks = tasks.filter(t => t.id !== newTask.id);
+      StorageService.saveItems(StorageService.STORAGE_KEYS.tasks, tasks);
+
+      tasks = StorageService.loadItems(StorageService.STORAGE_KEYS.tasks);
+
+      assert(tasks.length === taskLength, 'Uzdevums dzēsts');
+
+      //window.TasksModule.initializeTasksModule();
 
     // SCENĀRIJS: ieraduma atzīmēšana
     let habits = [{
@@ -100,8 +113,15 @@
       done: false
     }];
 
-    habits[0].done = true;
+    StorageService.saveItems(StorageService.STORAGE_KEYS.habits, habits);
+    window.HabitsModule.initializeHabitsModule();
 
+    const checkbox = document.querySelector('#habit-list input[type="checkbox"]');
+
+    checkbox.checked = true;
+    checkbox.dispatchEvent(new Event('change'));
+
+    habits = StorageService.loadItems(StorageService.STORAGE_KEYS.habits);
     assert(habits[0].done === true, 'Ieradums atzīmēts kā izpildīts');
 
     // JAUNS SCENĀRIJS: pievienot ieradumu
