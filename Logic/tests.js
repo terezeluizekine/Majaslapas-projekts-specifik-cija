@@ -9,25 +9,26 @@
     }
   }
 
-  // Veicam renderēšanas pārbaudi, kur tiek izveidots liels daudzums ar mākslīgiem botiem.
-  function runPerformanceTest() {
-    console.group('VEIKTSPĒJAS TESTI: Lielu ieradumu renderēšana');
+  function runAcceptanceTest() {
+    console.group('AKCEPT TESTI');
 
-    // Masīva izveide, kur ir 500 botu
     const hugeHabits = [];
     for (let i = 0; i < 5000; i++) {
       hugeHabits.push({
-        id: StorageService.createId(),
+        id: createId(),
         text: 'Ieradums ' + i,
         done: false
       });
     }
 
+    // ✔️ Saglabājam localStorage
+    StorageService.saveItems(StorageService.STORAGE_KEYS.habits, hugeHabits);
 
-    const originalLoad = StorageService.loadItems;
-    StorageService.loadItems = (key) => key === StorageService.STORAGE_KEYS.habits ? hugeHabits : originalLoad(key);
+    // ✔️ Notīram UI
+    const habitList = document.querySelector('#habit-list');
+    if (habitList) habitList.innerHTML = '';
 
-    // Iniciācija
+    // ✔️ Renderējam
     const startTime = performance.now();
     HabitsModule.initializeHabitsModule();
     const endTime = performance.now();
@@ -35,17 +36,11 @@
     console.log(`Renderēti ${hugeHabits.length} ieradumi.`);
     console.log(`Renderēšanas laiks: ${(endTime - startTime).toFixed(2)} ms`);
 
-    // Pārbaude
-    const habitList = document.querySelector('#habit-list');
-    if (habitList) {
-      const listLength = habitList.children.length;
-      console.assert(listLength === hugeHabits.length, `DOM satur ${listLength} ieradumus (paredzēti ${hugeHabits.length})`);
-    } else {
-      console.error('❌ #habit-list nav atrasts DOM');
-    }
-
-    // Atjaunojam loadItems funkciju
-    StorageService.loadItems = originalLoad;
+    // ✔️ Pārbaude
+    const listLength = habitList.children.length;
+    console.assert(listLength === hugeHabits.length,
+        `DOM satur ${listLength} ieradumus (paredzēti ${hugeHabits.length})`
+    );
 
     console.groupEnd();
   }
@@ -72,8 +67,8 @@
   }
 
 
-    function runAcceptanceTests() {
-      console.group('AKCEPTTESTI');
+    function runIntegrationTests() {
+      console.group('INTEGRĀCIJU TESTI');
 
       // SCENĀRIJS: pievienot uzdevumu
       const newTask = {
@@ -197,8 +192,8 @@
     console.clear();
     console.log('--- TESTĒŠANA ---');
     runUnitTests();
-    runAcceptanceTests();
-    runPerformanceTest();
+    runIntegrationTests();
+    runAcceptanceTest();
     runSecurityTest();
     runReliabilityTest();
   }
