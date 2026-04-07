@@ -75,6 +75,7 @@
     function runAcceptanceTests() {
       console.group('AKCEPTTESTI');
 
+      // SCENĀRIJS: pievienot uzdevumu
       const newTask = {
         id: createId(),
         text: 'Testa uzdevums',
@@ -125,7 +126,7 @@
     assert(habits[0].done === true, 'Ieradums atzīmēts kā izpildīts');
 
     // JAUNS SCENĀRIJS: pievienot ieradumu
-    let habitsList = [];
+    let habitsList = StorageService.loadItems(StorageService.STORAGE_KEYS.habits);
     const newHabitText = 'Jauns ieradums';
 
     const newHabit = {
@@ -134,13 +135,20 @@
       done: false
     };
 
-    habitsList.push(newHabit);
+    let habitsLength = habitsList.length;
 
-    assert(habitsList.length === 1, 'Ieradums pievienots');
-    assert(habitsList[0].text === newHabitText, 'Ieraduma teksts pareizs');
-    assert(habitsList[0].done === false, 'Ieradums sākumā nav izpildīts');
+    habitsList.push(newHabit);
+    StorageService.saveItems(StorageService.STORAGE_KEYS.habits, habitsList);
+
+    habitsList = StorageService.loadItems(StorageService.STORAGE_KEYS.habits);
+
+    assert(habitsList.length === habitsLength + 1, 'Ieradums pievienots');
+    assert(habitsList[habitsLength].text === newHabitText, 'Ieraduma teksts saglabāts');
+    assert(habitsList[habitsLength].done === false, 'Ieraduma izpildes stāvoklis saglabāts');
 
     console.groupEnd();
+
+    window.HabitsModule.initializeHabitsModule();
   }
 
   function runSecurityTest() {
