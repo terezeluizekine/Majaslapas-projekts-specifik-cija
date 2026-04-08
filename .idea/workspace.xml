@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69147a72-1ff9-4920-9a89-cc3a05452a94" name="Changes" comment="">
+    <list default="true" id="69147a72-1ff9-4920-9a89-cc3a05452a94" name="Changes" comment="Papildināju testu tabulu.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TESTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/TESTING.md" afterDir="false" />
     </list>
@@ -63,6 +63,16 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Majaslapas-projekts-specifik-cija-fork/UI/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,7 +89,7 @@
       <updated>1775467644704</updated>
       <workItem from="1775467645877" duration="479000" />
       <workItem from="1775539816694" duration="979000" />
-      <workItem from="1775624909495" duration="4946000" />
+      <workItem from="1775624909495" duration="9805000" />
     </task>
     <task id="LOCAL-00001" summary="Pievienoju akcepttestu, kur pārbaudīju iespēju izmantot &quot;Pievenot ieradumus&quot;:&#10;*Vai ieradums tiek pareizi ievadīts.&#10;*Vai tiek saglabāts masīvā.&#10;*Vai ieradums jau automātiski netiek &quot;atķeksēts&quot;, kad viņu tikai pievienoja.&#10;Pievienots renderēšanas tests, kur tiek simulēts liels skaits ar ieradumiem. Pārbauda, vai sp';ej visu attēlot un cik ātri.">
       <option name="closed" value="true" />
@@ -89,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775467937832</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Papildināju testu tabulu.">
+      <option name="closed" value="true" />
+      <created>1775633997887</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1775633997887</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Pievienoju akcepttestu, kur pārbaudīju iespēju izmantot &quot;Pievenot ieradumus&quot;:&#10;*Vai ieradums tiek pareizi ievadīts.&#10;*Vai tiek saglabāts masīvā.&#10;*Vai ieradums jau automātiski netiek &quot;atķeksēts&quot;, kad viņu tikai pievienoja.&#10;Pievienots renderēšanas tests, kur tiek simulēts liels skaits ar ieradumiem. Pārbauda, vai sp';ej visu attēlot un cik ātri." />
-    <option name="LAST_COMMIT_MESSAGE" value="Pievienoju akcepttestu, kur pārbaudīju iespēju izmantot &quot;Pievenot ieradumus&quot;:&#10;*Vai ieradums tiek pareizi ievadīts.&#10;*Vai tiek saglabāts masīvā.&#10;*Vai ieradums jau automātiski netiek &quot;atķeksēts&quot;, kad viņu tikai pievienoja.&#10;Pievienots renderēšanas tests, kur tiek simulēts liels skaits ar ieradumiem. Pārbauda, vai sp';ej visu attēlot un cik ātri." />
+    <MESSAGE value="Papildināju testu tabulu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Papildināju testu tabulu." />
   </component>
 </project>
