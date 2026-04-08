@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69147a72-1ff9-4920-9a89-cc3a05452a94" name="Changes" comment="Pievienoju akcepttestu, kur pārbaudīju iespēju izmantot &quot;Pievenot ieradumus&quot;:&#10;*Vai ieradums tiek pareizi ievadīts.&#10;*Vai tiek saglabāts masīvā.&#10;*Vai ieradums jau automātiski netiek &quot;atķeksēts&quot;, kad viņu tikai pievienoja.&#10;Pievienots renderēšanas tests, kur tiek simulēts liels skaits ar ieradumiem. Pārbauda, vai sp';ej visu attēlot un cik ātri." />
+    <list default="true" id="69147a72-1ff9-4920-9a89-cc3a05452a94" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/TESTING.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,12 +27,12 @@
     &quot;assignee&quot;: &quot;RobertoSmila&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Unreal00000/Majaslapas-projekts-specifik-cija.git&quot;,
-    &quot;accountId&quot;: &quot;f7c9ce1b-b7ed-4e62-88b8-76a041b2781b&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Unreal00000/Majaslapas-projekts-specifik-cija.git",
+    "accountId": "24cd0c86-47bf-4478-b88f-3804f769c927"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -46,14 +49,17 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "Roberts",
+    "git-widget-placeholder": "Marcis",
     "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -73,6 +79,7 @@
       <updated>1775467644704</updated>
       <workItem from="1775467645877" duration="479000" />
       <workItem from="1775539816694" duration="979000" />
+      <workItem from="1775624909495" duration="4946000" />
     </task>
     <task id="LOCAL-00001" summary="Pievienoju akcepttestu, kur pārbaudīju iespēju izmantot &quot;Pievenot ieradumus&quot;:&#10;*Vai ieradums tiek pareizi ievadīts.&#10;*Vai tiek saglabāts masīvā.&#10;*Vai ieradums jau automātiski netiek &quot;atķeksēts&quot;, kad viņu tikai pievienoja.&#10;Pievienots renderēšanas tests, kur tiek simulēts liels skaits ar ieradumiem. Pārbauda, vai sp';ej visu attēlot un cik ātri.">
       <option name="closed" value="true" />
